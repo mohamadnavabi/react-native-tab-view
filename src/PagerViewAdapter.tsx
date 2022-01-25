@@ -41,6 +41,7 @@ export default function PagerViewAdapter<T extends Route>({
   onSwipeEnd,
   children,
   style,
+  layoutDirection = "ltr",
   ...rest
 }: Props<T>) {
   const { index } = navigationState;
@@ -123,7 +124,7 @@ export default function PagerViewAdapter<T extends Route>({
       <AnimatedViewPager
         {...rest}
         ref={pagerRef}
-        layoutDirection="ltr"
+        layoutDirection={layoutDirection}
         style={[
           styles.container,
           style,
