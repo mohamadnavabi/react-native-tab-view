@@ -128,7 +128,7 @@ export default function PagerViewAdapter<T extends Route>({
         style={[
           styles.container,
           style,
-          { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
+          { transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }] }
         ]}
         initialPage={index}
         keyboardDismissMode={
